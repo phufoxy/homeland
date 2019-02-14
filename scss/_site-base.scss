@@ -1,0 +1,565 @@
+@font-face {
+  font-family: "roboto";
+  src: url("../fonts/roboto/Roboto-Regular.ttf");
+}
+$break-small: 320px;
+$break-medium: 678px;
+$break-large: 992px;
+$color_green: rgba(54, 78, 104, 1);
+$color_blue: rgba(124, 189, 30, 1);
+$color_menu: rgba($white, 0.6);
+$color-text-opacity: rgba(113, 108, 108, 1);
+$color-footer: rgba(51, 51, 51, 1);
+@mixin transition($para) {
+  transition: $para;
+  -moz-transition: $para;
+  -webkit-transition: $para;
+  -ms-transition: $para;
+}
+@mixin tranform($para) {
+  transform: $para;
+  -moz-transform: $para;
+  -webkit-transform: $para;
+  -ms-transform: $para;
+}
+::-webkit-scrollbar {
+  background-color: transparent;
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: $color_blue;
+  box-shadow: inset 0 0 6px $color_green;
+}
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: $white;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+body {
+  font-family: "roboto";
+  font-size: 16px;
+  line-height: 1.4em;
+}
+.b-page-hero {
+  display: block;
+  height: 666px;
+  img {
+    height: 666px;
+  }
+}
+.b-page-tab {
+  position: relative;
+  top: -40px;
+  .b-tab-form {
+    width: 100%;
+    padding: 50px 20px 30px;
+    background-color: $color_green;
+    box-shadow: 1px 1px 1px rgba(54, 78, 104, 1);
+    margin-bottom: 20px;
+    .form-item {
+      background: transparent;
+      .b-text-form {
+        color: $color_menu;
+        font-size: 14px;
+        font-weight: 200;
+      }
+      .b-form-select {
+        width: 100%;
+        padding: 10px;
+      }
+      .b-btn {
+        margin-top: 24px;
+        padding: 10px;
+        background-color: $color_blue;
+        border: none;
+        box-shadow: 1px 1px 1px rgba($white, 0.6);
+        width: 100%;
+        cursor: pointer;
+        color: $white;
+      }
+    }
+  }
+  .b-tab-card {
+    display: block;
+    .b-link {
+      display: inline;
+      margin-left: 10px;
+      i {
+        color: $black;
+      }
+    }
+  }
+  .b-page-nav {
+    text-align: right;
+    .b-item {
+      display: inline;
+      padding-left: 10px;
+      padding-right: 10px;
+      .b-link {
+        color: $black;
+        &.is-all {
+          border-right: 1px solid $black;
+          padding-left: 10px;
+          padding-right: 10px;
+        }
+      }
+      .b-form-select {
+        width: 100px;
+        padding: 5px 10px;
+      }
+    }
+  }
+  @media screen and (max-width: $break-large) {
+    top: 10px;
+    .form-item {
+      margin-top: 10px;
+    }
+    .b-tab-card {
+      display: block;
+      .b-link {
+        display: inline;
+        margin-left: 10px;
+        i {
+          color: $black;
+        }
+      }
+    }
+    .b-page-nav {
+      text-align: left;
+      .b-item {
+        display: inline;
+        padding-left: 0px;
+        padding-right: 0px;
+      }
+    }
+  }
+}
+.b-page-hotel {
+  display: block;
+  padding: 30px 0;
+  .b-card {
+    position: relative;
+    box-shadow: 0 0 10px -2px rgba(0, 0, 0, 0.6);
+    border-radius: 2px;
+    margin-bottom: 20px;
+    .b-link {
+      position: relative;
+      width: 100%;
+      .b-image {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        img {
+          width: 100%;
+          @include transition(all 0.3s ease-in-out);
+        }
+        .b-heart {
+          position: absolute;
+          bottom: 10px;
+          right: 10px;
+          background-color: $white;
+          padding: 10px;
+          height: 50px;
+          width: 50px;
+          border-radius: 100%;
+          i {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            color: $black;
+            @include tranform(translate(-50%, -50%));
+          }
+          &.is-active {
+            background-color: $danger;
+            i {
+              color: $white;
+            }
+          }
+          &:hover {
+            background-color: $danger;
+            i {
+              color: $white;
+            }
+          }
+        }
+      }
+      &:hover {
+        img {
+          @include tranform(scale(1.4));
+        }
+      }
+      .b-info {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        .b-sale {
+          display: block;
+          background-color: $danger;
+          color: $white;
+          font-size: 12px;
+          font-family: "roboto";
+          padding: 0 10px;
+          border-radius: 4px;
+          margin-top: 4px;
+        }
+        .b-rent {
+          display: block;
+          background-color: $green;
+          color: $white;
+          font-size: 12px;
+          font-family: "roboto";
+          padding: 0 10px;
+          border-radius: 4px;
+          margin-top: 4px;
+        }
+        .b-lease {
+          display: block;
+          background-color: $cyan;
+          color: $white;
+          font-size: 12px;
+          font-family: "roboto";
+          padding: 0 10px;
+          border-radius: 4px;
+          margin-top: 4px;
+        }
+      }
+    }
+    .b-desc {
+      padding: 10px 20px;
+      .b-text-title {
+        color: $black;
+        font-family: "roboto";
+        font-size: 20px;
+      }
+      .b-text-norm {
+        color: $color-text-opacity;
+        font-size: 16px;
+        font-family: "roboto";
+      }
+      .b-text-price {
+        color: $color_blue;
+        font-weight: 400;
+        font-family: "roboto";
+      }
+    }
+    .b-page-nav {
+      padding: 10px 20px;
+      line-height: 0;
+      .b-item {
+        display: inline-block;
+        padding-left: 10px;
+        padding-right: 10px;
+        .b-text-norm {
+          color: $color-text-opacity;
+          font-size: 10px;
+          font-family: "roboto";
+        }
+        .b-text-title {
+          font-family: "roboto";
+          font-size: 20px;
+          color: $black;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+  .b-page-nagivation {
+    margin-top: 30px;
+    .b-item {
+      position: relative;
+      display: inline-block;
+      box-shadow: 0 0 10px -2px rgba(0, 0, 0, 0.6);
+      width: 40px;
+      height: 40px;
+      padding: 20px;
+      border-radius: 100%;
+      margin-left: 10px;
+      cursor: pointer;
+      .b-link {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        color: $black;
+        font-size: 16px;
+        font-family: "roboto";
+        @include tranform(translate(-50%, -50%));
+      }
+      &.is-active {
+        background-color: $color_blue;
+        .b-link {
+          color: $white;
+        }
+      }
+      &:hover {
+        background-color: $color_blue;
+        .b-link {
+          color: $white;
+        }
+      }
+    }
+  }
+}
+.b-page-choose {
+  display: block;
+  padding: 50px 0;
+  .b-heading {
+    .b-text-title {
+      font-size: 36px;
+      font-family: "roboto";
+      font-weight: 900;
+    }
+    .b-text-norm {
+      position: relative;
+      font-size: 16px;
+      font-family: "roboto";
+      color: $color-text-opacity;
+      &::before {
+        content: "";
+        position: absolute;
+        width: 50%;
+        height: 2px;
+        background-color: $color_blue;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 20px);
+      }
+    }
+  }
+  .b-card {
+    margin-top: 50px;
+    .b-header {
+      padding: 5px;
+      i {
+        color: $color_green;
+        font-size: 36px;
+      }
+      .b-text-title {
+        margin-top: 10px;
+        font-size: 20px;
+      }
+    }
+    .b-content {
+      .b-text-norm {
+        color: $color-text-opacity;
+        font-size: 14px;
+      }
+    }
+    .b-link {
+      color: $color-text-opacity;
+      font-size: 16px;
+      text-decoration: none;
+      @include transition(all 0.3s ease-in-out);
+      &:hover {
+        color: $color_green;
+        font-weight: 900;
+      }
+    }
+  }
+}
+.b-page-blog {
+  display: block;
+  padding: 50px 0;
+  .b-heading {
+    display: block;
+    margin-bottom: 50px;
+    .b-text-title {
+      color: $black;
+      font-weight: 900;
+      font-family: "roboto";
+      ~ .b-text-norm {
+        position: relative;
+        color: $color-text-opacity;
+        font-size: 16px;
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          background: $color_blue;
+          width: 50%;
+          height: 2px;
+          @include tranform(translate(-50%, 30px));
+        }
+      }
+    }
+  }
+  .b-card {
+    position: relative;
+    margin-top: 30px;
+    box-shadow: 0 0 10px -2px rgba(0, 0, 0, 0.6);
+    border-radius: 4px;
+    .b-image {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+      img {
+        width: 100%;
+        @include transition(all 0.3s ease-in-out);
+      }
+      &:hover {
+        img {
+          @include tranform(scale(1.2));
+        }
+      }
+    }
+    .b-desc {
+      padding: 20px;
+      .b-time {
+        color: $color-text-opacity;
+        font-size: 14px;
+        ~ .b-text-title {
+          color: $color_green;
+          font-size: 18px;
+          font-weight: 500;
+        }
+        ~ .b-text-norm {
+          color: $black;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+.b-page-our {
+  display: block;
+  padding: 50px 0;
+  .b-heading {
+    margin-top: 10px;
+    margin-bottom: 50px;
+    .b-text-title {
+      color: $black;
+      font-size: 36px;
+      font-family: "roboto";
+      ~ .b-text-norm {
+        position: relative;
+        color: $color-text-opacity;
+        font-size: 16px;
+        font-family: "roboto";
+        &::after {
+          position: absolute;
+          content: "";
+          background-color: $color_blue;
+          top: 100%;
+          left: 50%;
+          width: 50%;
+          height: 2px;
+          @include tranform(translate(-50%, 30px));
+        }
+      }
+    }
+  }
+  .b-card {
+    margin-top: 50px;
+    box-shadow: 0 0 10px -2px rgba(0, 0, 0, 0.6);
+    border-radius: 4px;
+    .b-image {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+      img {
+        width: 100%;
+        @include transition(all 0.3s ease-in-out);
+        &:hover {
+          @include tranform(scale(1.2));
+        }
+      }
+    }
+    .b-desc {
+      padding: 20px 10px 0px 10px;
+      .b-text-title {
+        color: $black;
+        font-size: 20px;
+        font-family: "roboto";
+        font-weight: 500;
+      }
+      .b-text-person {
+        color: $color-text-opacity;
+        font-size: 16px;
+        font-family: "roboto";
+      }
+      .b-text-norm {
+        margin-top: 20px;
+        color: $color-text-opacity;
+        font-size: 14px;
+        font-family: "roboto";
+      }
+    }
+    .b-page-nav {
+      padding: 5px 10px;
+      .b-item {
+        display: inline;
+        padding-left: 10px;
+        padding-right: 10px;
+        i {
+          color: $color_blue;
+        }
+      }
+    }
+  }
+}
+.b-page-footer {
+  background-color: $color-footer;
+  padding: 50px 0;
+  .b-text-title {
+    position: relative;
+    color: $white;
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 30px;
+    &::after {
+      content: "";
+      position: absolute;
+      width: 20%;
+      top: 100%;
+      left: 0px;
+      height: 2px;
+      background-color: $white;
+      @include tranform(translate(0px, 10px));
+    }
+  }
+  .b-text-norm {
+    color: $color-text-opacity;
+    font-size: 14px;
+    font-family: "roboto";
+  }
+  .b-menu-footer {
+    .b-list-item {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      .b-item {
+        width: 50%;
+        background: transparent;
+        padding-bottom: 10px;
+        .b-link {
+          color: $color-text-opacity;
+          text-align: left;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+  .b-page-nav {
+    .b-item {
+      display: inline;
+      &:not(:first-child) {
+        margin-left: 24px;
+      }
+      i {
+        color: $color-text-opacity;
+      }
+    }
+  }
+  .b-text-footer {
+    margin-top: 50px;
+    .b-text-norm {
+      color: $color-text-opacity;
+      .b-text-heart {
+        color: $red;
+        font-size: 30px;
+      }
+    }
+  }
+}
