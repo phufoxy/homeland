@@ -316,6 +316,7 @@
 ::-webkit-scrollbar {
   background-color: transparent;
   width: 8px;
+  height: 4px;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -325,8 +326,8 @@
 }
 
 ::-webkit-scrollbar-track {
-  border-radius: 10px;
   background-color: #fff;
+  height: 2px;
   box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
 }
 
@@ -740,6 +741,44 @@ body {
 .b-page-blog .b-card .b-desc .b-time ~ .b-text-norm {
   color: #000;
   font-size: 16px;
+}
+.b-page-blog .b-page-nagivation {
+  margin-top: 30px;
+}
+.b-page-blog .b-page-nagivation .b-item {
+  position: relative;
+  display: inline-block;
+  box-shadow: 0 0 10px -2px rgba(0, 0, 0, 0.6);
+  width: 40px;
+  height: 40px;
+  padding: 20px;
+  border-radius: 100%;
+  margin-left: 10px;
+  cursor: pointer;
+}
+.b-page-blog .b-page-nagivation .b-item .b-link {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  color: #000;
+  font-size: 16px;
+  font-family: "roboto";
+  transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+.b-page-blog .b-page-nagivation .b-item.is-active {
+  background-color: #7cbd1e;
+}
+.b-page-blog .b-page-nagivation .b-item.is-active .b-link {
+  color: #fff;
+}
+.b-page-blog .b-page-nagivation .b-item:hover {
+  background-color: #7cbd1e;
+}
+.b-page-blog .b-page-nagivation .b-item:hover .b-link {
+  color: #fff;
 }
 
 .b-page-our {

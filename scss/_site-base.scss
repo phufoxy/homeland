@@ -25,6 +25,7 @@ $color-footer: rgba(51, 51, 51, 1);
 ::-webkit-scrollbar {
   background-color: transparent;
   width: 8px;
+  height: 4px;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -33,8 +34,8 @@ $color-footer: rgba(51, 51, 51, 1);
   box-shadow: inset 0 0 6px $color_green;
 }
 ::-webkit-scrollbar-track {
-  border-radius: 10px;
   background-color: $white;
+  height: 2px;
   box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
 }
 body {
@@ -420,6 +421,41 @@ body {
         ~ .b-text-norm {
           color: $black;
           font-size: 16px;
+        }
+      }
+    }
+  }
+  .b-page-nagivation {
+    margin-top: 30px;
+    .b-item {
+      position: relative;
+      display: inline-block;
+      box-shadow: 0 0 10px -2px rgba(0, 0, 0, 0.6);
+      width: 40px;
+      height: 40px;
+      padding: 20px;
+      border-radius: 100%;
+      margin-left: 10px;
+      cursor: pointer;
+      .b-link {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        color: $black;
+        font-size: 16px;
+        font-family: "roboto";
+        @include tranform(translate(-50%, -50%));
+      }
+      &.is-active {
+        background-color: $color_blue;
+        .b-link {
+          color: $white;
+        }
+      }
+      &:hover {
+        background-color: $color_blue;
+        .b-link {
+          color: $white;
         }
       }
     }
