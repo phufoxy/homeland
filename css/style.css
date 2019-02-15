@@ -17,6 +17,9 @@
   position: absolute;
   right: 10px;
   top: 20px;
+  width: 50px;
+  height: 50px;
+  background: red;
 }
 .b-page-header .is-mobile .btn-mobile {
   visibility: hidden;
@@ -24,11 +27,21 @@
   border: none;
   background-color: #7cbd1e;
   color: #fff;
+  width: 100%;
+  height: 50px;
 }
 @media screen and (max-width: 992px) {
+  .b-page-header .is-mobile {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 50px;
+    height: 50px;
+  }
   .b-page-header .is-mobile .btn-mobile {
     visibility: visible;
     opacity: 1;
+    z-index: 99999;
   }
 }
 .b-page-header.sticky {
@@ -50,6 +63,11 @@
 }
 .b-page-header .b-link-logo .is-current {
   color: #dc3545;
+}
+@media screen and (max-width: 992px) {
+  .b-page-header .b-link-logo {
+    text-align: center;
+  }
 }
 .b-page-header .b-page-nav {
   text-align: right;
