@@ -11,6 +11,17 @@ window.onload = function () {
             header.classList.remove('sticky');
         }
     }
+    document.getElementById('b-togger').onclick = function () {
+        toggerMenu();
+    }
+    function toggerMenu() {
+        var x = document.getElementById('top-menu');
+        if (x.className === 'b-page-nav') {
+            x.className += ' responsive';
+        } else {
+            x.className = 'b-page-nav'
+        }
+    }
 }
 
 wow = new WOW(

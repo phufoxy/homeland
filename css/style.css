@@ -13,6 +13,24 @@
   -webkit-transition: all 0.3s ease-in-out;
   -ms-transition: all 0.3s ease-in-out;
 }
+.b-page-header .is-mobile {
+  position: absolute;
+  right: 10px;
+  top: 20px;
+}
+.b-page-header .is-mobile .btn-mobile {
+  visibility: hidden;
+  opacity: 0;
+  border: none;
+  background-color: #7cbd1e;
+  color: #fff;
+}
+@media screen and (max-width: 992px) {
+  .b-page-header .is-mobile .btn-mobile {
+    visibility: visible;
+    opacity: 1;
+  }
+}
 .b-page-header.sticky {
   position: fixed;
   width: 100%;
@@ -167,12 +185,18 @@
     opacity: 0;
     position: absolute;
     background-color: #fff;
-    width: 300px;
-    top: 0px;
-    right: 0px;
+    width: 340px;
+    top: -350px;
+    right: -50px;
     z-index: 99999;
     box-shadow: 0 0 10px -2px #364e68;
     border-radius: 4px;
+    height: 400px;
+    overflow: scroll;
+    transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
   }
   .b-page-header .b-page-nav .b-item {
     display: block;
@@ -275,6 +299,13 @@
     -moz-transition: all 0.5s ease-in-out;
     -webkit-transition: all 0.5s ease-in-out;
     -ms-transition: all 0.5s ease-in-out;
+  }
+}
+@media screen and (max-width: 992px) {
+  .b-page-header .b-page-nav.responsive {
+    visibility: visible;
+    opacity: 1;
+    top: -20px;
   }
 }
 
