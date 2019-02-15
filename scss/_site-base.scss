@@ -139,9 +139,154 @@ body {
     }
   }
 }
+.b-page-details {
+  position: relative;
+  padding: 50px 0;
+  .b-details {
+    border: {
+      radius: 4px;
+    }
+    box-shadow: 0 0 10px -2px rgba(0, 0, 0, 0.6);
+    padding-bottom: 40px;
+  }
+  .b-total {
+    padding: 20px 20px;
+    .b-text-prices {
+      color: $color_blue;
+      font-family: "roboto";
+      font-size: 36px;
+      font-weight: 500;
+    }
+    .b-page-nav {
+      display: block;
+      text-align: right;
+      .b-item {
+        display: inline-block;
+        padding-left: 10px;
+        padding-right: 10px;
+        .b-text-title {
+          font-size: 16px;
+        }
+        .b-text-norm {
+          font-size: 14px;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+  .b-info {
+    width: 90%;
+    padding: 10px 10px;
+    border-top: 0.5px solid rgba(0, 0, 0, 0.6);
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.6);
+    margin: 0 auto;
+    text-align: center;
+    .b-text-title {
+      font-size: 18px;
+      font-weight: 400;
+    }
+    .b-text-desc {
+      font-size: 16px;
+    }
+  }
+  .b-content {
+    padding: 30px 30px;
+    text-align: left;
+    .b-text-title {
+      font-size: 24px;
+      font-weight: 500;
+    }
+    .b-text-norm {
+      font-size: 14px;
+      line-height: 24px;
+      color: $color-text-opacity;
+    }
+  }
+  .b-gallery {
+    padding: 10px 30px;
+    .b-text-title {
+      font-size: 24px;
+      font-weight: 500;
+    }
+    .b-group-images {
+      display: flex;
+      flex-wrap: wrap;
+      .b-image {
+        width: 25%;
+        overflow: hidden;
+        img {
+          cursor: pointer;
+          width: 100%;
+          @include transition(all 0.3s ease-in-out);
+          &:hover {
+            @include tranform(scale(1.4));
+          }
+        }
+      }
+    }
+  }
+  .b-contact {
+    padding: 20px 30px;
+    box-shadow: 0 0 10px -2px rgba(0, 0, 0, 0.6);
+    border-radius: 4px;
+    .b-text-title {
+      font-size: 18px;
+      font-weight: 500;
+    }
+    .b-form-control {
+      padding: 5px 0;
+      .b-label {
+        font-size: 14px;
+        color: $color-text-opacity;
+      }
+      input {
+        width: 100%;
+        padding: 5px;
+        border-radius: 4px;
+        border: 1px solid rgba(0, 0, 0, 0.6);
+      }
+    }
+    .b-btn-form {
+      background-color: $color_green;
+      border: none;
+      color: $white;
+      font-size: 14px;
+      font-weight: 400;
+      padding: 5px 10px;
+      margin-top: 10px;
+    }
+  }
+  .b-paragraph {
+    padding: 20px 30px;
+    box-shadow: 0 0 10px -2px rgba(0, 0, 0, 0.6);
+    border-radius: 4px;
+    margin-top: 30px;
+    .b-text-title {
+      color: $black;
+      font-size: 16px;
+      font-weight: 600;
+    }
+    .b-text-norm {
+      color: $color-text-opacity;
+      font-size: 14px;
+      font-weight: 400;
+      text-align: left;
+      line-height: 24px;
+    }
+  }
+}
 .b-page-hotel {
   display: block;
   padding: 30px 0;
+  .b-heading {
+    position: relative;
+    text-align: left;
+    padding: 20px 0;
+    .b-text-title {
+      font-weight: 600;
+      font-size: 24px;
+    }
+  }
   .b-card {
     position: relative;
     box-shadow: 0 0 10px -2px rgba(0, 0, 0, 0.6);

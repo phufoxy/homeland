@@ -14,6 +14,12 @@ $color_green: rgba(54, 78, 104, 1);
   -webkit-transition: $para;
   -ms-transition: $para;
 }
+@mixin tranform($para) {
+  transform: $para;
+  -moz-transform: $para;
+  -webkit-transform: $para;
+  -ms-transform: $para;
+}
 .b-page-header {
   position: absolute;
   width: 100%;
@@ -89,6 +95,20 @@ $color_green: rgba(54, 78, 104, 1);
           font-weight: 900;
           font-size: 16px;
           color: $color_menu;
+        }
+      }
+      > .b-dropdown {
+        &::after {
+          position: absolute;
+          top: 0px;
+          left: 40px;
+          font-family: "Font Awesome 5 Free";
+          content: "\f0d8";
+          top: 30%;
+          font-weight: 900;
+          font-size: 36px;
+          color: $white;
+          @include tranform(translate(0, -60px));
         }
       }
       .b-dropdown {
