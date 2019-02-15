@@ -19,6 +19,14 @@ $color_green: rgba(54, 78, 104, 1);
   width: 100%;
   padding: 30px 0;
   background: transparent;
+  @include transition(all 0.3s ease-in-out);
+  &.sticky {
+    position: fixed;
+    width: 100%;
+    padding: 10px 0;
+    background: $color_green;
+    z-index: 9999;
+  }
   .b-link-logo {
     color: $white;
     text-decoration: none;

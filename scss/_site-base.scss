@@ -563,3 +563,29 @@ body {
     }
   }
 }
+.b-page-loader {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 99999;
+  transition: all 0.9s ease-in-out;
+  background-color: $color_blue;
+  .b-text-title {
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    color: $white;
+    font-family: "roboto";
+    @include tranform(translate(-50%, -50%));
+  }
+  img {
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    color: $white;
+    @include tranform(translate(-50%, -50%));
+    width: 150px;
+  }
+}
