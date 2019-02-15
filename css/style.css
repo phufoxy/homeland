@@ -383,6 +383,8 @@ body {
 .b-page-tab .b-tab-card .b-link {
   display: inline;
   margin-left: 10px;
+  border: none;
+  background-color: transparent;
 }
 .b-page-tab .b-tab-card .b-link i {
   color: #000;
@@ -507,19 +509,20 @@ body {
   display: block;
   background-color: #dc3545;
   color: #fff;
-  font-size: 12px;
+  font-size: 10px;
   font-family: "roboto";
-  padding: 0 10px;
+  padding: 0px 8px;
   border-radius: 4px;
   margin-top: 4px;
+  text-align: center;
 }
 .b-page-hotel .b-card .b-link .b-info .b-rent {
   display: block;
   background-color: #28a745;
   color: #fff;
-  font-size: 12px;
+  font-size: 10px;
   font-family: "roboto";
-  padding: 0 10px;
+  padding: 0px 8px;
   border-radius: 4px;
   margin-top: 4px;
 }
@@ -527,9 +530,9 @@ body {
   display: block;
   background-color: #17a2b8;
   color: #fff;
-  font-size: 12px;
+  font-size: 10px;
   font-family: "roboto";
-  padding: 0 10px;
+  padding: 0px 8px;
   border-radius: 4px;
   margin-top: 4px;
 }

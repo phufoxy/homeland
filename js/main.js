@@ -14,6 +14,7 @@ window.onload = function () {
     document.getElementById('b-togger').onclick = function () {
         toggerMenu();
     }
+
     function toggerMenu() {
         var x = document.getElementById('top-menu');
         if (x.className === 'b-page-nav') {

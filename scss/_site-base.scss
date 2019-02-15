@@ -86,6 +86,8 @@ body {
     .b-link {
       display: inline;
       margin-left: 10px;
+      border: none;
+      background-color: transparent;
       i {
         color: $black;
       }
@@ -198,19 +200,20 @@ body {
           display: block;
           background-color: $danger;
           color: $white;
-          font-size: 12px;
+          font-size: 10px;
           font-family: "roboto";
-          padding: 0 10px;
+          padding: 0px 8px;
           border-radius: 4px;
           margin-top: 4px;
+          text-align: center;
         }
         .b-rent {
           display: block;
           background-color: $green;
           color: $white;
-          font-size: 12px;
+          font-size: 10px;
           font-family: "roboto";
-          padding: 0 10px;
+          padding: 0px 8px;
           border-radius: 4px;
           margin-top: 4px;
         }
@@ -218,9 +221,9 @@ body {
           display: block;
           background-color: $cyan;
           color: $white;
-          font-size: 12px;
+          font-size: 10px;
           font-family: "roboto";
-          padding: 0 10px;
+          padding: 0px 8px;
           border-radius: 4px;
           margin-top: 4px;
         }
