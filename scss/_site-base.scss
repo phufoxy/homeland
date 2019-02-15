@@ -502,6 +502,134 @@ body {
     }
   }
 }
+.b-page-company {
+  padding: 50px 0;
+  margin-top: 30px;
+  .b-image {
+    width: 100%;
+    img {
+      width: 100%;
+    }
+  }
+  .b-our-company {
+    padding: 10px 30px;
+    .b-text-title {
+      font-family: "roboto";
+      font-weight: 900;
+      letter-spacing: 6px;
+      font-size: 36px;
+    }
+    .b-text-medium {
+      font-family: "roboto";
+      font-weight: 400;
+      letter-spacing: 1px;
+      font-size: 18px;
+      color: $color-text-opacity;
+      margin-top: 10px;
+    }
+    .b-text-norm {
+      margin-top: 10px;
+      font-size: 16px;
+      font-family: "roboto";
+      color: $color-text-opacity;
+      margin-bottom: 30px;
+    }
+    .b-link {
+      border: 1.2px solid $color_green;
+      padding: 10px 50px;
+      text-decoration: none;
+      color: $color_green;
+      @include transition(all 0.3s ease-in-out);
+      &:hover {
+        background-color: $color_blue;
+        color: $white;
+      }
+    }
+  }
+}
+.b-page-question {
+  display: block;
+  padding: 50px 0;
+  .b-heading {
+    margin-top: 10px;
+    margin-bottom: 50px;
+    .b-text-title {
+      color: $black;
+      font-size: 36px;
+      font-family: "roboto";
+      ~ .b-text-norm {
+        position: relative;
+        color: $color-text-opacity;
+        font-size: 16px;
+        font-family: "roboto";
+        &::after {
+          position: absolute;
+          content: "";
+          background-color: $color_blue;
+          top: 100%;
+          left: 50%;
+          width: 50%;
+          height: 2px;
+          @include tranform(translate(-50%, 30px));
+        }
+      }
+    }
+  }
+  .b-accordion {
+    @include tranform(translate(0, 50px));
+    margin-top: 0px;
+
+    .b-panel {
+      padding: 0 18px;
+      background-color: white;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.2s ease-out;
+      .b-text-norm {
+        margin-top: 30px;
+      }
+    }
+    .b-btn-accordion {
+      position: relative;
+      border: none;
+      width: 100%;
+      background-color: transparent;
+      cursor: pointer;
+      text-align: left;
+      padding: 0;
+      font-size: 24px;
+      font-weight: 400;
+      height: 50px;
+      background-color: transparent;
+      &::after {
+        position: absolute;
+        font-family: "Font Awesome 5 Free";
+        content: "\f13a";
+        right: 10px;
+        top: 10px;
+        font-weight: 900;
+        font-size: 16px;
+        color: $color_green;
+      }
+      &.active {
+        &::after {
+          position: absolute;
+          font-family: "Font Awesome 5 Free";
+          content: "\f35b";
+          right: 10px;
+          top: 10px;
+          font-weight: 900;
+          font-size: 16px;
+          color: $color_green;
+        }
+      }
+    }
+    .b-info {
+      display: block;
+      margin-top: 30px;
+    }
+  }
+}
 .b-page-footer {
   background-color: $color-footer;
   padding: 50px 0;
