@@ -28,12 +28,15 @@
         </h3>
         <img src="./images/loader.gif" alt="Loader">
     </div>
+    <div class="site-mobile-menu">
+        <div class="site-mobile-menu-header">
+            <div class="site-mobile-menu-close mt-3">
+                <span class="icon-close2 js-menu-toggle"><i class="fas fa-window-close"></i></span>
+            </div>
+        </div>
+        <div class="site-mobile-menu-body"></div>
+    </div> <!-- .site-mobile-menu -->
     <header class="b-page-header" id="b-page-header">
-        <span class="is-mobile">
-            <button class="btn-mobile" id="b-togger">
-                <i class="fas fa-bars"></i>
-            </button>
-        </span>
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 col-md-12  wow bounceInLeft">
@@ -44,8 +47,13 @@
                     </a>
                 </div>
                 <div class="col-lg-8 col-md-12 wow bounceInRight">
-                    <nav class="b-page-nav" id="top-menu">
-                        <ul class="b-list-item">
+                    <nav class="b-page-nav">
+                        <div class="b-open-menu">
+                            <a href=" #" class="site-menu-toggle js-menu-toggle">
+                                <i class="fas fa-bars"></i>
+                            </a>
+                        </div>
+                        <ul class="b-list-item js-clone-nav d-none d-lg-block">
                             <li class="b-item">
                                 <a href="index.html" class="b-link is-active">Home</a>
                             </li>
@@ -62,7 +70,7 @@
                                         <a href="#" class="b-link">Home</a>
                                     </li>
                                     <li class="b-item">
-                                        <a href="about.html" class="b-link">Buy</a>
+                                        <a href="buy.html" class="b-link">Buy</a>
                                     </li>
                                     <li class="b-item b-hash-children">
                                         <a href="#" class="b-link">Rent</a>
