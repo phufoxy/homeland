@@ -1,0 +1,94 @@
+/*==========================
+Global Rules
+============================*/
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,800");
+
+// Variables
+$shadow-box: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 5px 0 rgba(0, 0, 0, 0.23);
+
+$color-main: #14badc;
+$color-gray: #999;
+$color-white: #fefefe;
+$color-gray-loading: lighten($color-gray, 10%);
+
+// Mixins
+
+@mixin infiniteCharAnimation($animationName, $loopNum) {
+  @for $i from 1 through $loopNum {
+    &:nth-child(#{$i}) {
+      $delayTime: 100 * $i + ms;
+      display: inline-block;
+      animation-name: $animationName;
+      animation-iteration-count: infinite;
+      animation-duration: 1s;
+      animation-delay: $delayTime;
+      animation-timing-function: ease;
+      animation-fill-mode: both;
+      backface-visibility: hidden;
+    }
+  }
+}
+
+// Aniamtion from Animate.css
+@mixin animation($animationName) {
+  animation-duration: 1s;
+  animation-name: $animationName;
+}
+/*==========================================
+// Body Rules
+===========================================*/
+
+* {
+  transition: all 0.5s ease;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+/*==========================
+Pre-loader Style
+============================*/
+
+.loadingScreen {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: $color-white;
+  z-index: 900000;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /*Wrapper*/
+  &__wrapper {
+    width: fit-content;
+    //  Stop Moving On hover
+    &:hover {
+      *,
+      ::before,
+      ::after {
+        animation-play-state: paused;
+      }
+    }
+
+    /* text */
+    &__text {
+      p {
+        text-align: center;
+        font-size: 30px;
+        font-weight: 900;
+        color: $color-gray-loading;
+        letter-spacing: 5px;
+        span {
+          padding: 7px;
+          @include infiniteCharAnimation(bounce, 9);
+        }
+      }
+    }
+  }
+}

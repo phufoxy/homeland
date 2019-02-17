@@ -40,7 +40,7 @@ jQuery(document).ready(function ($) {
     "use strict";
     // loading page
     var loaderPage = function () {
-        $('.b-page-loader').fadeOut('slow');
+        $('.loadingScreen').fadeOut('slow');
     }
     // Document on load.
     $(document).ready(function () {

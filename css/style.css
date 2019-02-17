@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,800");
 @font-face {
   font-family: "roboto";
   src: url("../fonts/roboto/Roboto-Regular.ttf");
@@ -1306,6 +1307,149 @@ body {
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   width: 150px;
+}
+
+/*==========================
+Global Rules
+============================*/
+/*==========================================
+// Body Rules
+===========================================*/
+* {
+  transition: all 0.5s ease;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+/*==========================
+Pre-loader Style
+============================*/
+.loadingScreen {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: #fefefe;
+  z-index: 900000;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*Wrapper*/
+}
+.loadingScreen__wrapper {
+  width: fit-content;
+  /* text */
+}
+.loadingScreen__wrapper:hover *,
+.loadingScreen__wrapper:hover ::before,
+.loadingScreen__wrapper:hover ::after {
+  animation-play-state: paused;
+}
+.loadingScreen__wrapper__text p {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 900;
+  color: #b3b3b3;
+  letter-spacing: 5px;
+}
+.loadingScreen__wrapper__text p span {
+  padding: 7px;
+}
+.loadingScreen__wrapper__text p span:nth-child(1) {
+  display: inline-block;
+  animation-name: bounce;
+  animation-iteration-count: infinite;
+  animation-duration: 1s;
+  animation-delay: 100ms;
+  animation-timing-function: ease;
+  animation-fill-mode: both;
+  backface-visibility: hidden;
+}
+.loadingScreen__wrapper__text p span:nth-child(2) {
+  display: inline-block;
+  animation-name: bounce;
+  animation-iteration-count: infinite;
+  animation-duration: 1s;
+  animation-delay: 200ms;
+  animation-timing-function: ease;
+  animation-fill-mode: both;
+  backface-visibility: hidden;
+}
+.loadingScreen__wrapper__text p span:nth-child(3) {
+  display: inline-block;
+  animation-name: bounce;
+  animation-iteration-count: infinite;
+  animation-duration: 1s;
+  animation-delay: 300ms;
+  animation-timing-function: ease;
+  animation-fill-mode: both;
+  backface-visibility: hidden;
+}
+.loadingScreen__wrapper__text p span:nth-child(4) {
+  display: inline-block;
+  animation-name: bounce;
+  animation-iteration-count: infinite;
+  animation-duration: 1s;
+  animation-delay: 400ms;
+  animation-timing-function: ease;
+  animation-fill-mode: both;
+  backface-visibility: hidden;
+}
+.loadingScreen__wrapper__text p span:nth-child(5) {
+  display: inline-block;
+  animation-name: bounce;
+  animation-iteration-count: infinite;
+  animation-duration: 1s;
+  animation-delay: 500ms;
+  animation-timing-function: ease;
+  animation-fill-mode: both;
+  backface-visibility: hidden;
+}
+.loadingScreen__wrapper__text p span:nth-child(6) {
+  display: inline-block;
+  animation-name: bounce;
+  animation-iteration-count: infinite;
+  animation-duration: 1s;
+  animation-delay: 600ms;
+  animation-timing-function: ease;
+  animation-fill-mode: both;
+  backface-visibility: hidden;
+}
+.loadingScreen__wrapper__text p span:nth-child(7) {
+  display: inline-block;
+  animation-name: bounce;
+  animation-iteration-count: infinite;
+  animation-duration: 1s;
+  animation-delay: 700ms;
+  animation-timing-function: ease;
+  animation-fill-mode: both;
+  backface-visibility: hidden;
+}
+.loadingScreen__wrapper__text p span:nth-child(8) {
+  display: inline-block;
+  animation-name: bounce;
+  animation-iteration-count: infinite;
+  animation-duration: 1s;
+  animation-delay: 800ms;
+  animation-timing-function: ease;
+  animation-fill-mode: both;
+  backface-visibility: hidden;
+}
+.loadingScreen__wrapper__text p span:nth-child(9) {
+  display: inline-block;
+  animation-name: bounce;
+  animation-iteration-count: infinite;
+  animation-duration: 1s;
+  animation-delay: 900ms;
+  animation-timing-function: ease;
+  animation-fill-mode: both;
+  backface-visibility: hidden;
 }
 
 /*# sourceMappingURL=style.css.map */
