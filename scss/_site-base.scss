@@ -414,6 +414,128 @@ body {
       }
     }
   }
+  .b-card-view {
+    position: relative;
+    box-shadow: 0 0 10px -2px rgba(0, 0, 0, 0.6);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    .b-image {
+      position: relative;
+      overflow: hidden;
+      img {
+        width: 100%;
+        @include transition(all 0.3s ease-in-out);
+        &:hover {
+          @include tranform(scale(1.4));
+        }
+      }
+      .b-heart {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background-color: $white;
+        padding: 10px;
+        height: 50px;
+        width: 50px;
+        border-radius: 100%;
+        i {
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          color: $black;
+          @include tranform(translate(-50%, -50%));
+        }
+        &.is-active {
+          background-color: $danger;
+          i {
+            color: $white;
+          }
+        }
+        &:hover {
+          background-color: $danger;
+          i {
+            color: $white;
+          }
+        }
+      }
+      .b-info {
+        position: absolute;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        .b-sale {
+          display: block;
+          background-color: $danger;
+          color: $white;
+          font-size: 10px;
+          font-family: "roboto";
+          padding: 0px 8px;
+          border-radius: 4px;
+          margin-top: 4px;
+          text-align: center;
+        }
+        .b-rent {
+          display: block;
+          background-color: $green;
+          color: $white;
+          font-size: 10px;
+          font-family: "roboto";
+          padding: 0px 8px;
+          border-radius: 4px;
+          margin-top: 4px;
+        }
+        .b-lease {
+          display: block;
+          background-color: $cyan;
+          color: $white;
+          font-size: 10px;
+          font-family: "roboto";
+          padding: 0px 8px;
+          border-radius: 4px;
+          margin-top: 4px;
+        }
+      }
+    }
+    .b-desc {
+      padding: 20px 10px;
+      .b-text-title {
+        color: $black;
+        font-family: "roboto";
+        font-size: 20px;
+      }
+      .b-text-norm {
+        color: $color-text-opacity;
+        font-size: 16px;
+        font-family: "roboto";
+      }
+      .b-text-price {
+        color: $color_blue;
+        font-weight: 400;
+        font-family: "roboto";
+      }
+    }
+    .b-page-nav {
+      padding: 20px 10px;
+      line-height: 0;
+      .b-item {
+        display: inline-block;
+        padding-left: 10px;
+        padding-right: 10px;
+        .b-text-norm {
+          color: $color-text-opacity;
+          font-size: 10px;
+          font-family: "roboto";
+        }
+        .b-text-title {
+          font-family: "roboto";
+          font-size: 20px;
+          color: $black;
+          font-weight: 500;
+        }
+      }
+    }
+  }
   .b-page-nagivation {
     margin-top: 30px;
     .b-item {

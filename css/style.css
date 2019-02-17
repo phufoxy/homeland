@@ -783,6 +783,137 @@ body {
   color: #000;
   font-weight: 500;
 }
+.b-page-hotel .b-card-view {
+  position: relative;
+  box-shadow: 0 0 10px -2px rgba(0, 0, 0, 0.6);
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+.b-page-hotel .b-card-view .b-image {
+  position: relative;
+  overflow: hidden;
+}
+.b-page-hotel .b-card-view .b-image img {
+  width: 100%;
+  transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+}
+.b-page-hotel .b-card-view .b-image img:hover {
+  transform: scale(1.4);
+  -moz-transform: scale(1.4);
+  -webkit-transform: scale(1.4);
+  -ms-transform: scale(1.4);
+}
+.b-page-hotel .b-card-view .b-image .b-heart {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #fff;
+  padding: 10px;
+  height: 50px;
+  width: 50px;
+  border-radius: 100%;
+}
+.b-page-hotel .b-card-view .b-image .b-heart i {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  color: #000;
+  transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+.b-page-hotel .b-card-view .b-image .b-heart.is-active {
+  background-color: #dc3545;
+}
+.b-page-hotel .b-card-view .b-image .b-heart.is-active i {
+  color: #fff;
+}
+.b-page-hotel .b-card-view .b-image .b-heart:hover {
+  background-color: #dc3545;
+}
+.b-page-hotel .b-card-view .b-image .b-heart:hover i {
+  color: #fff;
+}
+.b-page-hotel .b-card-view .b-image .b-info {
+  position: absolute;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+.b-page-hotel .b-card-view .b-image .b-info .b-sale {
+  display: block;
+  background-color: #dc3545;
+  color: #fff;
+  font-size: 10px;
+  font-family: "roboto";
+  padding: 0px 8px;
+  border-radius: 4px;
+  margin-top: 4px;
+  text-align: center;
+}
+.b-page-hotel .b-card-view .b-image .b-info .b-rent {
+  display: block;
+  background-color: #28a745;
+  color: #fff;
+  font-size: 10px;
+  font-family: "roboto";
+  padding: 0px 8px;
+  border-radius: 4px;
+  margin-top: 4px;
+}
+.b-page-hotel .b-card-view .b-image .b-info .b-lease {
+  display: block;
+  background-color: #17a2b8;
+  color: #fff;
+  font-size: 10px;
+  font-family: "roboto";
+  padding: 0px 8px;
+  border-radius: 4px;
+  margin-top: 4px;
+}
+.b-page-hotel .b-card-view .b-desc {
+  padding: 20px 10px;
+}
+.b-page-hotel .b-card-view .b-desc .b-text-title {
+  color: #000;
+  font-family: "roboto";
+  font-size: 20px;
+}
+.b-page-hotel .b-card-view .b-desc .b-text-norm {
+  color: #716c6c;
+  font-size: 16px;
+  font-family: "roboto";
+}
+.b-page-hotel .b-card-view .b-desc .b-text-price {
+  color: #7cbd1e;
+  font-weight: 400;
+  font-family: "roboto";
+}
+.b-page-hotel .b-card-view .b-page-nav {
+  padding: 20px 10px;
+  line-height: 0;
+}
+.b-page-hotel .b-card-view .b-page-nav .b-item {
+  display: inline-block;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.b-page-hotel .b-card-view .b-page-nav .b-item .b-text-norm {
+  color: #716c6c;
+  font-size: 10px;
+  font-family: "roboto";
+}
+.b-page-hotel .b-card-view .b-page-nav .b-item .b-text-title {
+  font-family: "roboto";
+  font-size: 20px;
+  color: #000;
+  font-weight: 500;
+}
 .b-page-hotel .b-page-nagivation {
   margin-top: 30px;
 }
