@@ -38,6 +38,36 @@ $color-footer: rgba(51, 51, 51, 1);
   height: 2px;
   box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
 }
+.text-doc-bottom {
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 2px;
+    background-color: $color_blue;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 20px);
+  }
+}
+.b-heading {
+  .b-text-title {
+    font-size: 36px;
+    font-family: "roboto";
+    font-weight: 900;
+  }
+  .b-text-norm {
+    position: relative;
+    font-size: 16px;
+    font-family: "roboto";
+    color: $color-text-opacity;
+  }
+}
+.b-shadow-card {
+  box-shadow: 0 0 10px -2px rgba(0, 0, 0, 0.6);
+  border-radius: 4px;
+}
 body {
   font-family: "roboto";
   font-size: 16px;
@@ -289,8 +319,6 @@ body {
   }
   .b-card {
     position: relative;
-    box-shadow: 0 0 10px -2px rgba(0, 0, 0, 0.6);
-    border-radius: 2px;
     margin-bottom: 20px;
     .b-link {
       position: relative;
@@ -575,29 +603,6 @@ body {
 .b-page-choose {
   display: block;
   padding: 50px 0;
-  .b-heading {
-    .b-text-title {
-      font-size: 36px;
-      font-family: "roboto";
-      font-weight: 900;
-    }
-    .b-text-norm {
-      position: relative;
-      font-size: 16px;
-      font-family: "roboto";
-      color: $color-text-opacity;
-      &::before {
-        content: "";
-        position: absolute;
-        width: 50%;
-        height: 2px;
-        background-color: $color_blue;
-        bottom: 0;
-        left: 50%;
-        transform: translate(-50%, 20px);
-      }
-    }
-  }
   .b-card {
     margin-top: 50px;
     .b-header {
@@ -632,35 +637,9 @@ body {
 .b-page-blog {
   display: block;
   padding: 50px 0;
-  .b-heading {
-    display: block;
-    margin-bottom: 50px;
-    .b-text-title {
-      color: $black;
-      font-weight: 900;
-      font-family: "roboto";
-      ~ .b-text-norm {
-        position: relative;
-        color: $color-text-opacity;
-        font-size: 16px;
-        &::after {
-          content: "";
-          position: absolute;
-          bottom: 0;
-          left: 50%;
-          background: $color_blue;
-          width: 50%;
-          height: 2px;
-          @include tranform(translate(-50%, 30px));
-        }
-      }
-    }
-  }
   .b-card {
     position: relative;
     margin-top: 30px;
-    box-shadow: 0 0 10px -2px rgba(0, 0, 0, 0.6);
-    border-radius: 4px;
     .b-image {
       position: relative;
       width: 100%;
@@ -731,35 +710,8 @@ body {
 .b-page-our {
   display: block;
   padding: 50px 0;
-  .b-heading {
-    margin-top: 10px;
-    margin-bottom: 50px;
-    .b-text-title {
-      color: $black;
-      font-size: 36px;
-      font-family: "roboto";
-      ~ .b-text-norm {
-        position: relative;
-        color: $color-text-opacity;
-        font-size: 16px;
-        font-family: "roboto";
-        &::after {
-          position: absolute;
-          content: "";
-          background-color: $color_blue;
-          top: 100%;
-          left: 50%;
-          width: 50%;
-          height: 2px;
-          @include tranform(translate(-50%, 30px));
-        }
-      }
-    }
-  }
   .b-card {
     margin-top: 50px;
-    box-shadow: 0 0 10px -2px rgba(0, 0, 0, 0.6);
-    border-radius: 4px;
     .b-image {
       position: relative;
       width: 100%;
@@ -800,6 +752,11 @@ body {
         padding-right: 10px;
         i {
           color: $color_blue;
+          @include transition(all 0.3s ease-in-out);
+          &:hover {
+            color: $color_green;
+            @include tranform(scale(2));
+          }
         }
       }
     }
@@ -933,70 +890,7 @@ body {
     }
   }
 }
-.b-page-footer {
-  background-color: $color-footer;
-  padding: 50px 0;
-  .b-text-title {
-    position: relative;
-    color: $white;
-    font-size: 18px;
-    font-weight: 400;
-    margin-bottom: 30px;
-    &::after {
-      content: "";
-      position: absolute;
-      width: 20%;
-      top: 100%;
-      left: 0px;
-      height: 2px;
-      background-color: $white;
-      @include tranform(translate(0px, 10px));
-    }
-  }
-  .b-text-norm {
-    color: $color-text-opacity;
-    font-size: 14px;
-    font-family: "roboto";
-  }
-  .b-menu-footer {
-    .b-list-item {
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      .b-item {
-        width: 50%;
-        background: transparent;
-        padding-bottom: 10px;
-        .b-link {
-          color: $color-text-opacity;
-          text-align: left;
-          font-size: 14px;
-        }
-      }
-    }
-  }
-  .b-page-nav {
-    .b-item {
-      display: inline;
-      &:not(:first-child) {
-        margin-left: 24px;
-      }
-      i {
-        color: $color-text-opacity;
-      }
-    }
-  }
-  .b-text-footer {
-    margin-top: 50px;
-    .b-text-norm {
-      color: $color-text-opacity;
-      .b-text-heart {
-        color: $red;
-        font-size: 30px;
-      }
-    }
-  }
-}
+
 .b-page-loader {
   position: fixed;
   left: 0px;

@@ -1,0 +1,72 @@
+.b-page-footer {
+  background-color: $color-footer;
+  padding: 50px 0;
+  .b-text-title {
+    position: relative;
+    color: $white;
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 30px;
+    &::after {
+      content: "";
+      position: absolute;
+      width: 20%;
+      top: 100%;
+      left: 0px;
+      height: 2px;
+      background-color: $white;
+      @include tranform(translate(0px, 10px));
+    }
+  }
+  .b-text-norm {
+    color: $color-text-opacity;
+    font-size: 14px;
+    font-family: "roboto";
+  }
+  .b-menu-footer {
+    .b-list-item {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      .b-item {
+        width: 50%;
+        background: transparent;
+        padding-bottom: 10px;
+        .b-link {
+          color: $color-text-opacity;
+          text-align: left;
+          font-size: 14px;
+          &:hover {
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+  .b-page-nav {
+    .b-item {
+      display: inline;
+      &:not(:first-child) {
+        margin-left: 24px;
+      }
+      i {
+        color: $color-text-opacity;
+        @include transition(all 0.3s ease-in-out);
+        &:hover {
+          color: $white;
+          @include tranform(scale(2));
+        }
+      }
+    }
+  }
+  .b-text-footer {
+    margin-top: 50px;
+    .b-text-norm {
+      color: $color-text-opacity;
+      .b-text-heart {
+        color: $red;
+        font-size: 30px;
+      }
+    }
+  }
+}

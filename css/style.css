@@ -389,6 +389,37 @@
   box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
 }
 
+.text-doc-bottom {
+  position: relative;
+}
+.text-doc-bottom::before {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 2px;
+  background-color: #7cbd1e;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 20px);
+}
+
+.b-heading .b-text-title {
+  font-size: 36px;
+  font-family: "roboto";
+  font-weight: 900;
+}
+.b-heading .b-text-norm {
+  position: relative;
+  font-size: 16px;
+  font-family: "roboto";
+  color: #716c6c;
+}
+
+.b-shadow-card {
+  box-shadow: 0 0 10px -2px rgba(0, 0, 0, 0.6);
+  border-radius: 4px;
+}
+
 body {
   font-family: "roboto";
   font-size: 16px;
@@ -651,8 +682,6 @@ body {
 }
 .b-page-hotel .b-card {
   position: relative;
-  box-shadow: 0 0 10px -2px rgba(0, 0, 0, 0.6);
-  border-radius: 2px;
   margin-bottom: 20px;
 }
 .b-page-hotel .b-card .b-link {
@@ -957,27 +986,6 @@ body {
   display: block;
   padding: 50px 0;
 }
-.b-page-choose .b-heading .b-text-title {
-  font-size: 36px;
-  font-family: "roboto";
-  font-weight: 900;
-}
-.b-page-choose .b-heading .b-text-norm {
-  position: relative;
-  font-size: 16px;
-  font-family: "roboto";
-  color: #716c6c;
-}
-.b-page-choose .b-heading .b-text-norm::before {
-  content: "";
-  position: absolute;
-  width: 50%;
-  height: 2px;
-  background-color: #7cbd1e;
-  bottom: 0;
-  left: 50%;
-  transform: translate(-50%, 20px);
-}
 .b-page-choose .b-card {
   margin-top: 50px;
 }
@@ -1014,38 +1022,9 @@ body {
   display: block;
   padding: 50px 0;
 }
-.b-page-blog .b-heading {
-  display: block;
-  margin-bottom: 50px;
-}
-.b-page-blog .b-heading .b-text-title {
-  color: #000;
-  font-weight: 900;
-  font-family: "roboto";
-}
-.b-page-blog .b-heading .b-text-title ~ .b-text-norm {
-  position: relative;
-  color: #716c6c;
-  font-size: 16px;
-}
-.b-page-blog .b-heading .b-text-title ~ .b-text-norm::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  background: #7cbd1e;
-  width: 50%;
-  height: 2px;
-  transform: translate(-50%, 30px);
-  -moz-transform: translate(-50%, 30px);
-  -webkit-transform: translate(-50%, 30px);
-  -ms-transform: translate(-50%, 30px);
-}
 .b-page-blog .b-card {
   position: relative;
   margin-top: 30px;
-  box-shadow: 0 0 10px -2px rgba(0, 0, 0, 0.6);
-  border-radius: 4px;
 }
 .b-page-blog .b-card .b-image {
   position: relative;
@@ -1124,38 +1103,8 @@ body {
   display: block;
   padding: 50px 0;
 }
-.b-page-our .b-heading {
-  margin-top: 10px;
-  margin-bottom: 50px;
-}
-.b-page-our .b-heading .b-text-title {
-  color: #000;
-  font-size: 36px;
-  font-family: "roboto";
-}
-.b-page-our .b-heading .b-text-title ~ .b-text-norm {
-  position: relative;
-  color: #716c6c;
-  font-size: 16px;
-  font-family: "roboto";
-}
-.b-page-our .b-heading .b-text-title ~ .b-text-norm::after {
-  position: absolute;
-  content: "";
-  background-color: #7cbd1e;
-  top: 100%;
-  left: 50%;
-  width: 50%;
-  height: 2px;
-  transform: translate(-50%, 30px);
-  -moz-transform: translate(-50%, 30px);
-  -webkit-transform: translate(-50%, 30px);
-  -ms-transform: translate(-50%, 30px);
-}
 .b-page-our .b-card {
   margin-top: 50px;
-  box-shadow: 0 0 10px -2px rgba(0, 0, 0, 0.6);
-  border-radius: 4px;
 }
 .b-page-our .b-card .b-image {
   position: relative;
@@ -1205,6 +1154,17 @@ body {
 }
 .b-page-our .b-card .b-page-nav .b-item i {
   color: #7cbd1e;
+  transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+}
+.b-page-our .b-card .b-page-nav .b-item i:hover {
+  color: #364e68;
+  transform: scale(2);
+  -moz-transform: scale(2);
+  -webkit-transform: scale(2);
+  -ms-transform: scale(2);
 }
 
 .b-page-company {
@@ -1343,6 +1303,39 @@ body {
   margin-top: 30px;
 }
 
+.b-page-loader {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 99999;
+  transition: all 0.9s ease-in-out;
+  background-color: #7cbd1e;
+}
+.b-page-loader .b-text-title {
+  position: absolute;
+  left: 50%;
+  top: 20%;
+  color: #fff;
+  font-family: "roboto";
+  transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+.b-page-loader img {
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  color: #fff;
+  transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  width: 150px;
+}
+
 .b-page-footer {
   background-color: #333333;
   padding: 50px 0;
@@ -1387,6 +1380,9 @@ body {
   text-align: left;
   font-size: 14px;
 }
+.b-page-footer .b-menu-footer .b-list-item .b-item .b-link:hover {
+  color: #fff;
+}
 .b-page-footer .b-page-nav .b-item {
   display: inline;
 }
@@ -1395,6 +1391,17 @@ body {
 }
 .b-page-footer .b-page-nav .b-item i {
   color: #716c6c;
+  transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+}
+.b-page-footer .b-page-nav .b-item i:hover {
+  color: #fff;
+  transform: scale(2);
+  -moz-transform: scale(2);
+  -webkit-transform: scale(2);
+  -ms-transform: scale(2);
 }
 .b-page-footer .b-text-footer {
   margin-top: 50px;
@@ -1405,39 +1412,6 @@ body {
 .b-page-footer .b-text-footer .b-text-norm .b-text-heart {
   color: #dc3545;
   font-size: 30px;
-}
-
-.b-page-loader {
-  position: fixed;
-  left: 0px;
-  top: 0px;
-  width: 100%;
-  height: 100%;
-  z-index: 99999;
-  transition: all 0.9s ease-in-out;
-  background-color: #7cbd1e;
-}
-.b-page-loader .b-text-title {
-  position: absolute;
-  left: 50%;
-  top: 20%;
-  color: #fff;
-  font-family: "roboto";
-  transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-}
-.b-page-loader img {
-  position: absolute;
-  left: 50%;
-  top: 40%;
-  color: #fff;
-  transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  width: 150px;
 }
 
 /*==========================
