@@ -26,6 +26,7 @@ $color_green: rgba(54, 78, 104, 1);
   padding: 30px 0;
   background: transparent;
   @include transition(all 0.3s ease-in-out);
+  z-index: 999;
   .is-mobile {
     position: absolute;
     right: 10px;

@@ -13,6 +13,7 @@
   -moz-transition: all 0.3s ease-in-out;
   -webkit-transition: all 0.3s ease-in-out;
   -ms-transition: all 0.3s ease-in-out;
+  z-index: 999;
 }
 .b-page-header .is-mobile {
   position: absolute;
